@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <article class="container">
+        <div class="page-header">
+            <h3>
+                {{ b_name }}
+                <small> {{ b_name_e }}</small>
+{#                {{ namespace }}#}
+            </h3>
+        </div>
+        <div>
+            <div class="col-md-6 col-md-offset-3">
+                <form role="form" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {% for input in form %}
+                        <div class="form-group">
+                            <label for="{{ input.id_for_label }}">{{ input.label }} *</label>
+                            {{ input }}
+                        </div>
+                    {% endfor %}
+                    <br>
+                    <div class="form-group text-center">
+                        <button type="submit" class="btn btn-info">작성완료<i class="fa fa-check spaceLeft"></i></button>
+                        <a href="{{ board }}">
+                            <button type="button" class="btn btn-warning">취소<i class="fa fa-times spaceLeft"></i></button>
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </article>
+{% endblock %}
