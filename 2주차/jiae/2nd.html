@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2nd</title>
+    <style>
+        * {
+            font-size: 15px;
+            font-family: "LG PC";
+
+        }
+        ul {
+            list-style: none;
+            padding-top:15px;
+            margin-right:5px;
+            margin: 20px;
+            padding : 10px;
+            border:1px solid;
+            width:700px;
+            height:30px;
+        }
+        li{
+            font-size: 12px;
+            margin: 0 0 0 0;
+            padding: 10px;
+            border : 0;
+            float: left;
+        }
+        li button{
+            float:right;
+        }
+        .submit{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<nav>
+<div class="menu" align="center">
+    <ul>
+        <li>ANT</li>
+        <li>공지사항</li>
+        <li>족보 게시판</li>
+        <li>가입인사</li>
+        <li>팀 게시판</li>
+        <li>정보 공유</li>
+        <li>문제 게시판</li>
+        <li><form><input type="search" placeholder="Search"></form>
+            <button class="icon"></button>
+        </li>
+    </ul>
+</div>
+</nav>
+<div class="login">
+    <form method="POST">
+        <h2>로그인<small>Login page</small></h2>
+        <hr width="90%" align="left" noshade="noshade" />
+        <p><input type="id" required="" placeholder="아이디 입력"></p>
+        <p><input type="password" required="" placeholder="비밀번호 입력"></p>
+        <p><input type="submit" value="로그인" /></p>
+        <p><a href="#">아이디</a>/<a href="#">패스워드 찾기</a> <a href="#">회원가입</a></p>
+    </form>
+</div>
+<div>
+    <form>
+        <h2>ANT 문제 게시판<small>ANT Algorithm page</small></h2>
+        <hr width="90%" align="left" noshade="noshade" />
+        <p>제목</p>
+        <input type="text" placeholder="제목 입력">
+        <p>내용</p>
+        <textarea spellcheck="true" rows="7" cols="50" placeholder="내용 입력"></textarea>
+        <p>파일</p>
+        <p><input type="file" /></p>
+        <p class="submit">
+            <input type="submit" value="작성완료" />
+            <input type="reset" value="취소" />
+        </p>
+    </form>
+</div>
+</body>
+</html>
